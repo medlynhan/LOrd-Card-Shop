@@ -20,5 +20,49 @@ namespace LOrd_Card_Shop.Handler
             }
             
         }
+
+        public void AddToCart(int userId, int cardId)
+        {
+            var existingItem = repository.GetCartItem(userId, cardId);
+
+            if (existingItem != null)
+            {
+                existingItem.Quantity++;
+                repository.UpdateCart(existingItem);
+            }
+            else
+            {
+                repository.AddToCart(new Cart
+                {
+                    CardId = cardId,
+                    UserId = userId,
+                    Quantity = 1
+                });
+            }
+
+            repository.SaveChanges();
+        }
+
+        public List<dynamic> getCart(int userId)
+        {
+            var cartItems = repository.getCart(userId)
+                .Select(item => new
+                {
+                    ShowName = item.CardName,
+                    Price = item.CardPrice,
+                    Description = item.CardDesc,
+                    Quantity = item.Quantity
+                }).ToList<dynamic>();
+
+            return cartItems;
+        }
+
+
+        public void clear(int userId)
+        {
+            repository.clear(userId);
+        }
+
+
     }
 }
