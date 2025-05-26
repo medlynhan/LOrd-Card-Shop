@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="37a58c9f99ba4076b6ec76fd623cab80" Name="Diagram1">
+        <EntityTypeShape EntityType="Database4Model.Card" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database4Model.Cart" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database4Model.TransactionDetail" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database4Model.TransactionHeader" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database4Model.User" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
+        <AssociationConnector Association="Database4Model.FK_Card" ManuallyRouted="false" />
+        <AssociationConnector Association="Database4Model.FK_TransactionDetail_Card" ManuallyRouted="false" />
+        <AssociationConnector Association="Database4Model.FK_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="Database4Model.FK_TransactionDetail_TransactionHeader" ManuallyRouted="false" />
+        <AssociationConnector Association="Database4Model.FK_TransactionHeader_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

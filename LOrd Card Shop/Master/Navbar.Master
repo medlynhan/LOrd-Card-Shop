@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Navbar.Master.cs" Inherits="LOrd_Card_Shop.Master.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        #navbar{
+            background-color: black;
+            color : white;
+            padding: 2em 2em;
+            
+        }
+        #navbar a{
+            text-decoration:none;
+            color : white;
+        }
+        #NavCustomer, #NavAdmin{
+            padding-top:1em;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+         #SearchBox {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap:3em;
+         }
+
+
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div id="navbar">
+                <div id="SearchBox">
+                    <input type="text" name="search" placeholder="Search shows..." value="<%= Request.QueryString["search"] ?? "" %>" />
+                    <input type="submit" value="Search" />
+                </div>
+
+                <div>
+                    <nav id="NavCustomer" runat="server" visible="false">
+
+                        <a href="../View/HomePage.aspx">Home</a>
+                        <a href="../View/OrderCardPage.aspx">Order Card</a>
+                        <a href="../View/ProfilePage.aspx">Profile</a>
+                        <a href="../View/TransactionHistoryPage.aspx">History</a>
+                        <a href="../View/CartPage.aspx">Cart</a>
+                        <asp:Button class="LogoutBtn" runat="server" Text="Logout" OnClick="Logout_Click1"  />
+                    </nav>
+                </div>
+
+                <div>
+                    <nav id="NavAdmin" runat="server" visible="false">
+                        <a href="../View/HomePage.aspx">Home</a>
+                        <a href="../View/ManageCardPage.aspx">Manage Card</a>
+                        <a href="../View/TransactionHistoryPage.aspx">View Transaction</a>
+                        <a href="../View/TransactionReportPage.aspx">Transaction Report</a>
+                        <a href="../View/TransactionHandlerPage.aspx">Order Queue</a>
+                        <asp:Button class="LogoutBtn" runat="server" Text="Logout" OnClick="Logout_Click2"/>
+                    </nav>
+                </div>
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
