@@ -1,4 +1,5 @@
-﻿using LOrd_Card_Shop.Model;
+﻿using LOrd_Card_Shop.Handler;
+using LOrd_Card_Shop.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace LOrd_Card_Shop.View
     public partial class CartPage : System.Web.UI.Page
     {
         Database4Entities db = new Database4Entities();
+        CartHandler handler = new CartHandler();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -22,6 +24,8 @@ namespace LOrd_Card_Shop.View
                 }
 
                 Bind();
+
+
             }
         }
 
@@ -33,22 +37,8 @@ namespace LOrd_Card_Shop.View
                 return;
             }
 
-            User user = (User)Session["user"];
-            int userId = user.UserId;
-
-            var cartItems = (from cart in db.Carts
-                             join card in db.Cards on cart.CardId equals card.CardId
-                             where cart.UserId == userId
-                             select new
-                             {
-                                 ShowName = card.CardName,
-                                 Price = card.CardPrice,
-                                 Description = card.CardDesc,
-                                 //Quantity = cart.Quantity,
-                                 //TotalPrice = card.CardPrice * cart.Quantity
-                             }).ToList();
-
-
+            var userId = ((dynamic)Session["user"]).UserId;
+            var cartItems = handler.getCart(userId);
             GridView1.DataSource = cartItems;
             GridView1.DataBind();
         }
@@ -57,6 +47,19 @@ namespace LOrd_Card_Shop.View
         protected void CheckoutBtn_Click(object sender, EventArgs e)
         {
             Response.Redirect("CheckoutPage.aspx");
+        }
+
+        protected void ClearBtn_Click(object sender, EventArgs e)
+        {
+            if (Session["user"] == null)
+            {
+                Response.Redirect("LoginPage.aspx");
+                return;
+            }
+
+            var userId = ((dynamic)Session["user"]).UserId;
+            handler.clear(userId);
+            Bind();
         }
     }
 }

@@ -59,9 +59,12 @@ namespace LOrd_Card_Shop.Controller
                 handler.insertCard(cardName, cardPrice, cardDesc, cardType, isFoil);
             }
         }
-            
 
-        
+
+        public List<object> GetAllCards()
+        {
+            return handler.getCardDetails();
+        }
 
         public List<Card> getAllCards()
         {

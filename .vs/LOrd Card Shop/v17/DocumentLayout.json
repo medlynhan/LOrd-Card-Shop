@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mich1\\source\\LOrd-Card-Shop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BE02DB06-FED4-434E-B3E8-BCC72C486BFB}|LOrd Card Shop\\LOrd Card Shop.csproj|C:\\Users\\mich1\\source\\LOrd-Card-Shop\\lord card shop\\view\\loginpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{BE02DB06-FED4-434E-B3E8-BCC72C486BFB}|LOrd Card Shop\\LOrd Card Shop.csproj|solutionrelative:lord card shop\\view\\loginpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE02DB06-FED4-434E-B3E8-BCC72C486BFB}|LOrd Card Shop\\LOrd Card Shop.csproj|c:\\users\\mich1\\source\\lord-card-shop\\lord card shop\\view\\cartpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE02DB06-FED4-434E-B3E8-BCC72C486BFB}|LOrd Card Shop\\LOrd Card Shop.csproj|solutionrelative:lord card shop\\view\\cartpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE02DB06-FED4-434E-B3E8-BCC72C486BFB}|LOrd Card Shop\\LOrd Card Shop.csproj|C:\\Users\\mich1\\source\\LOrd-Card-Shop\\lord card shop\\repositories\\cartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE02DB06-FED4-434E-B3E8-BCC72C486BFB}|LOrd Card Shop\\LOrd Card Shop.csproj|solutionrelative:lord card shop\\repositories\\cartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE02DB06-FED4-434E-B3E8-BCC72C486BFB}|LOrd Card Shop\\LOrd Card Shop.csproj|C:\\Users\\mich1\\source\\LOrd-Card-Shop\\lord card shop\\handler\\checkouthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE02DB06-FED4-434E-B3E8-BCC72C486BFB}|LOrd Card Shop\\LOrd Card Shop.csproj|solutionrelative:lord card shop\\handler\\checkouthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE02DB06-FED4-434E-B3E8-BCC72C486BFB}|LOrd Card Shop\\LOrd Card Shop.csproj|c:\\users\\mich1\\source\\lord-card-shop\\lord card shop\\view\\checkoutpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE02DB06-FED4-434E-B3E8-BCC72C486BFB}|LOrd Card Shop\\LOrd Card Shop.csproj|solutionrelative:lord card shop\\view\\checkoutpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE02DB06-FED4-434E-B3E8-BCC72C486BFB}|LOrd Card Shop\\LOrd Card Shop.csproj|C:\\Users\\mich1\\source\\LOrd-Card-Shop\\lord card shop\\view\\checkoutpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{BE02DB06-FED4-434E-B3E8-BCC72C486BFB}|LOrd Card Shop\\LOrd Card Shop.csproj|solutionrelative:lord card shop\\view\\checkoutpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE02DB06-FED4-434E-B3E8-BCC72C486BFB}|LOrd Card Shop\\LOrd Card Shop.csproj|C:\\Users\\mich1\\source\\LOrd-Card-Shop\\lord card shop\\repositories\\cardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE02DB06-FED4-434E-B3E8-BCC72C486BFB}|LOrd Card Shop\\LOrd Card Shop.csproj|solutionrelative:lord card shop\\repositories\\cardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 536,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CartPage.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\mich1\\source\\LOrd-Card-Shop\\LOrd Card Shop\\View\\CartPage.aspx.cs",
+              "RelativeDocumentMoniker": "LOrd Card Shop\\View\\CartPage.aspx.cs",
+              "ToolTip": "C:\\Users\\mich1\\source\\LOrd-Card-Shop\\LOrd Card Shop\\View\\CartPage.aspx.cs",
+              "RelativeToolTip": "LOrd Card Shop\\View\\CartPage.aspx.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T18:45:11.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CardRepository.cs",
+              "DocumentMoniker": "C:\\Users\\mich1\\source\\LOrd-Card-Shop\\LOrd Card Shop\\Repositories\\CardRepository.cs",
+              "RelativeDocumentMoniker": "LOrd Card Shop\\Repositories\\CardRepository.cs",
+              "ToolTip": "C:\\Users\\mich1\\source\\LOrd-Card-Shop\\LOrd Card Shop\\Repositories\\CardRepository.cs",
+              "RelativeToolTip": "LOrd Card Shop\\Repositories\\CardRepository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T18:33:29.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CartRepository.cs",
+              "DocumentMoniker": "C:\\Users\\mich1\\source\\LOrd-Card-Shop\\LOrd Card Shop\\Repositories\\CartRepository.cs",
+              "RelativeDocumentMoniker": "LOrd Card Shop\\Repositories\\CartRepository.cs",
+              "ToolTip": "C:\\Users\\mich1\\source\\LOrd-Card-Shop\\LOrd Card Shop\\Repositories\\CartRepository.cs",
+              "RelativeToolTip": "LOrd Card Shop\\Repositories\\CartRepository.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAuwB0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T17:25:48.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CheckoutHandler.cs",
+              "DocumentMoniker": "C:\\Users\\mich1\\source\\LOrd-Card-Shop\\LOrd Card Shop\\Handler\\CheckoutHandler.cs",
+              "RelativeDocumentMoniker": "LOrd Card Shop\\Handler\\CheckoutHandler.cs",
+              "ToolTip": "C:\\Users\\mich1\\source\\LOrd-Card-Shop\\LOrd Card Shop\\Handler\\CheckoutHandler.cs",
+              "RelativeToolTip": "LOrd Card Shop\\Handler\\CheckoutHandler.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T17:23:38.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CheckoutPage.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\mich1\\source\\LOrd-Card-Shop\\LOrd Card Shop\\View\\CheckoutPage.aspx.cs",
+              "RelativeDocumentMoniker": "LOrd Card Shop\\View\\CheckoutPage.aspx.cs",
+              "ToolTip": "C:\\Users\\mich1\\source\\LOrd-Card-Shop\\LOrd Card Shop\\View\\CheckoutPage.aspx.cs",
+              "RelativeToolTip": "LOrd Card Shop\\View\\CheckoutPage.aspx.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAkAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T17:18:27.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CheckoutPage.aspx",
+              "DocumentMoniker": "C:\\Users\\mich1\\source\\LOrd-Card-Shop\\LOrd Card Shop\\View\\CheckoutPage.aspx",
+              "RelativeDocumentMoniker": "LOrd Card Shop\\View\\CheckoutPage.aspx",
+              "ToolTip": "C:\\Users\\mich1\\source\\LOrd-Card-Shop\\LOrd Card Shop\\View\\CheckoutPage.aspx",
+              "RelativeToolTip": "LOrd Card Shop\\View\\CheckoutPage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-05-26T17:18:12.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginPage.aspx",
+              "DocumentMoniker": "C:\\Users\\mich1\\source\\LOrd-Card-Shop\\LOrd Card Shop\\View\\LoginPage.aspx",
+              "RelativeDocumentMoniker": "LOrd Card Shop\\View\\LoginPage.aspx",
+              "ToolTip": "C:\\Users\\mich1\\source\\LOrd-Card-Shop\\LOrd Card Shop\\View\\LoginPage.aspx",
+              "RelativeToolTip": "LOrd Card Shop\\View\\LoginPage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-05-26T09:23:48.224Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

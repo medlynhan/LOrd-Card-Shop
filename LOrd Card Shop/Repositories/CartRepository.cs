@@ -41,5 +41,71 @@ namespace LOrd_Card_Shop.Repositories
             db.SaveChanges();
 
         }
+
+
+
+
+        public Cart GetCartItem(int userId, int cardId)
+        {
+            return db.Carts.FirstOrDefault(c => c.CardId == cardId && c.UserId == userId);
+        }
+
+        public void AddToCart(Cart cart)
+        {
+            db.Carts.Add(cart);
+        }
+
+
+        public void UpdateCart(Cart cart)
+        {
+            var entry = db.Entry(cart);
+            entry.State = System.Data.Entity.EntityState.Modified;
+
+
+        }
+
+
+
+        public void SaveChanges()
+        {
+            db.SaveChanges();
+
+        }
+
+        public List<dynamic> getCart(int userId)
+        {
+
+             return (from cart in db.Carts
+                     join card in db.Cards on cart.CardId equals card.CardId
+                     where cart.UserId == userId
+                     select new
+                     {
+                         card.CardName,
+                         card.CardPrice,
+                         card.CardDesc,
+                         cart.Quantity
+                     }).ToList<dynamic>();
+
+        }
+
+        public void clear(int userId)
+        {
+
+             var cartItems = db.Carts.Where(c => c.UserId == userId).ToList();
+             if (cartItems.Any())
+             {
+                    db.Carts.RemoveRange(cartItems);
+                    db.SaveChanges();
+             }
+        }
+
+        public List<Cart> GetUserCartItems(int userId)
+        {
+            return db.Carts.Where(c => c.UserId == userId).ToList();
+        }
+
+
+
+
     }
 }
