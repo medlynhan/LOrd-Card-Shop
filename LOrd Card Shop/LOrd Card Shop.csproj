@@ -1226,6 +1226,7 @@
     <Content Include="View\AddCardPage.aspx" />
     <Content Include="View\CardDetailPage.aspx" />
     <Content Include="View\CartPage.aspx" />
+    <Content Include="View\CheckoutPage.aspx" />
     <Content Include="View\HomePage.aspx" />
     <Content Include="View\LoginPage.aspx" />
     <Content Include="View\ManageCardPage.aspx" />
@@ -1329,6 +1330,13 @@
     </Compile>
     <Compile Include="View\CartPage.aspx.designer.cs">
       <DependentUpon>CartPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\CheckoutPage.aspx.cs">
+      <DependentUpon>CheckoutPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\CheckoutPage.aspx.designer.cs">
+      <DependentUpon>CheckoutPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
