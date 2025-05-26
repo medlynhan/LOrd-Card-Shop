@@ -30,10 +30,13 @@ namespace LOrd_Card_Shop.View
             string isFoil = IsFoilTb.Text;
 
             ErrorMsg.Text = controller.cardValidation(cardName, cardPrice, cardDesc, cardType, isFoil);
-            
-            controller.insertCard(cardName, cardPrice, cardDesc, cardType, isFoil);
-    
-            Response.Redirect("ManageCardPage.aspx");
+
+            if (ErrorMsg.Text == " ")
+            {
+                controller.insertCard(cardName, cardPrice, cardDesc, cardType, isFoil);
+                Response.Redirect("ManageCardPage.aspx");
+            }
+
         }
     }
 }

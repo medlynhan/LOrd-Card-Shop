@@ -78,3 +78,83 @@ C:\Users\Madeline\source\repos\LOrd Card Shop\LOrd Card Shop\obj\Debug\LOrd Card
 C:\Users\Madeline\source\repos\LOrd Card Shop\LOrd Card Shop\obj\Debug\LOrd Card Shop.csproj.CopyComplete
 C:\Users\Madeline\source\repos\LOrd Card Shop\LOrd Card Shop\obj\Debug\LOrd Card Shop.dll
 C:\Users\Madeline\source\repos\LOrd Card Shop\LOrd Card Shop\obj\Debug\LOrd Card Shop.pdb
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\LOrd Card Shop.dll.config
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\LOrd Card Shop.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\LOrd Card Shop.pdb
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\csc.exe
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\csc.exe.config
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\csc.rsp
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\csi.exe
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\csi.exe.config
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\csi.rsp
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\System.AppContext.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\System.Console.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\System.IO.Compression.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\System.Net.Http.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\System.ValueTuple.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\vbc.exe
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\vbc.exe.config
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\vbc.rsp
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\VBCSCompiler.exe
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\CrystalDecisions.ReportSource.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\CrystalDecisions.Shared.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\CrystalDecisions.Web.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\EntityFramework.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\EntityFramework.SqlServer.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\stdole.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\EntityFramework.xml
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\EntityFramework.SqlServer.xml
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\obj\Debug\LOrd Card Shop.csproj.AssemblyReference.cache
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\obj\Debug\LOrd Card Shop.csproj.CoreCompileInputs.cache
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\obj\Debug\LOrd Card Shop.csproj.CopyComplete
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\obj\Debug\LOrd Card Shop.dll
+C:\Users\Madeline\Downloads\LOrd-Card-Shop\LOrd Card Shop\obj\Debug\LOrd Card Shop.pdb
