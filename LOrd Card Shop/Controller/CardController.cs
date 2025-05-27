@@ -59,12 +59,9 @@ namespace LOrd_Card_Shop.Controller
                 handler.insertCard(cardName, cardPrice, cardDesc, cardType, isFoil);
             }
         }
+            
 
-
-        public List<object> GetAllCards()
-        {
-            return handler.getCardDetails();
-        }
+        
 
         public List<Card> getAllCards()
         {
@@ -88,7 +85,11 @@ namespace LOrd_Card_Shop.Controller
         {
             handler.deleteCard(cardId);
 
+        }
 
+        public List<Card> GetFilteredCards(string keyword)
+        {
+            return handler.GetFilteredCards(keyword);
         }
 
     }

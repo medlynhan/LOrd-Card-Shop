@@ -18,6 +18,7 @@ namespace LOrd_Card_Shop.View
 
         }
 
+
         protected void RegisterBtn_Click(object sender, EventArgs e)
         {
             string username = UsernameTb.Text;
