@@ -33,6 +33,8 @@ namespace LOrd_Card_Shop.View
             var headertable = data.TransactionHeader;
             var detailtable = data.TransactionDetail;
 
+            var grandtotal = 0M;
+
             foreach (TransactionHeader t in transactions)
             {
                 var hrow = headertable.NewRow();
@@ -53,9 +55,15 @@ namespace LOrd_Card_Shop.View
 
                     var card = cardController.getCardById(d.CardId.GetValueOrDefault());
                     var totalPrice = card.CardPrice * d.Quantity;
+
+                    grandtotal += totalPrice.Value;
+
                     drow["TotalPrice"] = totalPrice;
                     detailtable.Rows.Add(drow);
+
                 }
+                hrow["GrandTotal"] = grandtotal;
+
             }
             return data;
         }

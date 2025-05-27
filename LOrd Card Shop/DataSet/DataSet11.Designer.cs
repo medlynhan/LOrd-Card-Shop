@@ -329,6 +329,8 @@ namespace LOrd_Card_Shop.DataSet {
             
             private global::System.Data.DataColumn columnStatus;
             
+            private global::System.Data.DataColumn columnGrandTotal;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public TransactionHeaderDataTable() {
@@ -396,6 +398,14 @@ namespace LOrd_Card_Shop.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn GrandTotalColumn {
+                get {
+                    return this.columnGrandTotal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -431,13 +441,14 @@ namespace LOrd_Card_Shop.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TransactionHeaderRow AddTransactionHeaderRow(string TransactionId, string TransactionDate, string CustomerId, string Status) {
+            public TransactionHeaderRow AddTransactionHeaderRow(string TransactionId, string TransactionDate, string CustomerId, string Status, string GrandTotal) {
                 TransactionHeaderRow rowTransactionHeaderRow = ((TransactionHeaderRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TransactionId,
                         TransactionDate,
                         CustomerId,
-                        Status};
+                        Status,
+                        GrandTotal};
                 rowTransactionHeaderRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTransactionHeaderRow);
                 return rowTransactionHeaderRow;
@@ -464,6 +475,7 @@ namespace LOrd_Card_Shop.DataSet {
                 this.columnTransactionDate = base.Columns["TransactionDate"];
                 this.columnCustomerId = base.Columns["CustomerId"];
                 this.columnStatus = base.Columns["Status"];
+                this.columnGrandTotal = base.Columns["GrandTotal"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -477,6 +489,8 @@ namespace LOrd_Card_Shop.DataSet {
                 base.Columns.Add(this.columnCustomerId);
                 this.columnStatus = new global::System.Data.DataColumn("Status", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnStatus);
+                this.columnGrandTotal = new global::System.Data.DataColumn("GrandTotal", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGrandTotal);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -975,6 +989,22 @@ namespace LOrd_Card_Shop.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string GrandTotal {
+                get {
+                    try {
+                        return ((string)(this[this.tableTransactionHeader.GrandTotalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'GrandTotal\' in table \'TransactionHeader\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransactionHeader.GrandTotalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsTransactionIdNull() {
                 return this.IsNull(this.tableTransactionHeader.TransactionIdColumn);
             }
@@ -1019,6 +1049,18 @@ namespace LOrd_Card_Shop.DataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetStatusNull() {
                 this[this.tableTransactionHeader.StatusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsGrandTotalNull() {
+                return this.IsNull(this.tableTransactionHeader.GrandTotalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetGrandTotalNull() {
+                this[this.tableTransactionHeader.GrandTotalColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
