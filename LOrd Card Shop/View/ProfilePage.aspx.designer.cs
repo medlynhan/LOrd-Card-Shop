@@ -42,6 +42,15 @@ namespace LOrd_Card_Shop.View
         protected global::System.Web.UI.WebControls.DropDownList GenderDdl;
 
         /// <summary>
+        /// GenderDdlText control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListItem GenderDdlText;
+
+        /// <summary>
         /// OldPasswordTb control.
         /// </summary>
         /// <remarks>

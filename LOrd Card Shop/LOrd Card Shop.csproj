@@ -1213,15 +1213,15 @@
     <Content Include="aspnet_client\system_web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_strings_zh_TW.js" />
     <Content Include="aspnet_client\system_web\4_0_30319\crystalreportviewers13\urlreporting\activexviewer.js" />
     <Content Include="aspnet_client\system_web\4_0_30319\crystalreportviewers13\urlreporting\appletviewer.js" />
-    <Content Include="Model\Model5.Context.tt">
+    <Content Include="Model\ModelLordCardShop.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model5.edmx</DependentUpon>
-      <LastGenOutput>Model5.Context.cs</LastGenOutput>
+      <DependentUpon>ModelLordCardShop.edmx</DependentUpon>
+      <LastGenOutput>ModelLordCardShop.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Model\Model5.tt">
+    <Content Include="Model\ModelLordCardShop.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model5.edmx</DependentUpon>
-      <LastGenOutput>Model5.cs</LastGenOutput>
+      <DependentUpon>ModelLordCardShop.edmx</DependentUpon>
+      <LastGenOutput>ModelLordCardShop.cs</LastGenOutput>
     </Content>
     <Content Include="View\AddCardPage.aspx" />
     <Content Include="View\CardDetailPage.aspx" />
@@ -1258,7 +1258,6 @@
     <Compile Include="Factories\UserFactory.cs" />
     <Compile Include="Handler\CardHandler.cs" />
     <Compile Include="Handler\CartHandler.cs" />
-    <Compile Include="Handler\CheckoutHandler.cs" />
     <Compile Include="Handler\TransactionDetailHandler.cs" />
     <Compile Include="Handler\TransactionHeaderHandler.cs" />
     <Compile Include="Handler\UserHandler.cs" />
@@ -1270,37 +1269,37 @@
       <DependentUpon>Navbar.Master</DependentUpon>
     </Compile>
     <Compile Include="Model\Card.cs">
-      <DependentUpon>Model5.tt</DependentUpon>
+      <DependentUpon>ModelLordCardShop.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Cart.cs">
-      <DependentUpon>Model5.tt</DependentUpon>
+      <DependentUpon>ModelLordCardShop.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Model5.Context.cs">
+    <Compile Include="Model\ModelLordCardShop.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model5.Context.tt</DependentUpon>
+      <DependentUpon>ModelLordCardShop.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Model5.cs">
+    <Compile Include="Model\ModelLordCardShop.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model5.tt</DependentUpon>
+      <DependentUpon>ModelLordCardShop.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Model5.Designer.cs">
+    <Compile Include="Model\ModelLordCardShop.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model5.edmx</DependentUpon>
+      <DependentUpon>ModelLordCardShop.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\Table.cs">
-      <DependentUpon>Model5.tt</DependentUpon>
+      <DependentUpon>ModelLordCardShop.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\TransactionDetail.cs">
-      <DependentUpon>Model5.tt</DependentUpon>
+      <DependentUpon>ModelLordCardShop.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\TransactionHeader.cs">
-      <DependentUpon>Model5.tt</DependentUpon>
+      <DependentUpon>ModelLordCardShop.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\User.cs">
-      <DependentUpon>Model5.tt</DependentUpon>
+      <DependentUpon>ModelLordCardShop.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Report\CrystalReport1.cs">
@@ -1433,12 +1432,12 @@
     <Content Include="DataSet\DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Content>
-    <EntityDeploy Include="Model\Model5.edmx">
+    <EntityDeploy Include="Model\ModelLordCardShop.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model5.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelLordCardShop.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Model\Model5.edmx.diagram">
-      <DependentUpon>Model5.edmx</DependentUpon>
+    <Content Include="Model\ModelLordCardShop.edmx.diagram">
+      <DependentUpon>ModelLordCardShop.edmx</DependentUpon>
     </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">

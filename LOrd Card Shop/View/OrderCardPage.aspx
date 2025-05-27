@@ -6,22 +6,22 @@
     <br />
     <h1>Order card</h1>
 
-    <asp:GridView ID="GridView1" runat="server" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnRowCommand="GridView1_RowCommand" AutoGenerateColumns="False" DataKeyNames="Id">
+    <asp:GridView ID="OrderCardGrid" runat="server" AutoGenerateColumns="False" OnRowEditing="OrderCardGrid_RowEditing">   
         <Columns>
-            <asp:BoundField DataField="Id" HeaderText="ID" SortExpression="Id" />
-            <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
-            <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
-            <asp:TemplateField>
+            <asp:TemplateField HeaderText="Action">
                 <ItemTemplate>
-                    <asp:Button ID="btnAddToCart" runat="server" 
-                    CommandName="AddToCart" 
-                    CommandArgument='<%# Container.DataItemIndex %>'
-                    Text="Add To Cart" />
+                    <asp:Button ID="Edit" runat="server" Text="Add To Cart"  CommandName="Edit"/>
                 </ItemTemplate>
             </asp:TemplateField>
+
+            <asp:BoundField DataField="CardId" HeaderText="CardId" SortExpression="CardId" />
+            <asp:BoundField DataField="CardName" HeaderText="CardName" SortExpression="CardName" />
+            <asp:BoundField DataField="CardPrice" HeaderText="CardPrice" SortExpression="CardPrice"/>
+
+
         </Columns>
-                
-    </asp:GridView>
+
+    </asp:GridView><br/>
     <br />
     <asp:Button ID="Detail" runat="server" Text="Card Detail Page" onclick="Detail_Click" /><br /><br />
 </asp:Content>

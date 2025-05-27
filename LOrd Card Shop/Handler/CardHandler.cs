@@ -4,6 +4,7 @@ using LOrd_Card_Shop.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Web;
 
 namespace LOrd_Card_Shop.Handler
@@ -45,6 +46,7 @@ namespace LOrd_Card_Shop.Handler
 
         public Card getCardById(int id)
         {
+           
             return repository.getCardById(id);
         }
 

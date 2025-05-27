@@ -19,7 +19,7 @@
             <asp:Label runat="server" Text="Gender:" />
             <br />
             <asp:DropDownList ID="GenderDdl" runat="server">
-                <asp:ListItem Text="--Select Gender--" Value="" />
+                <asp:ListItem ID="GenderDdlText" Text=" " Value="" />
                 <asp:ListItem Text="Male" Value="Male" />
                 <asp:ListItem Text="Female" Value="Female" />
             </asp:DropDownList>

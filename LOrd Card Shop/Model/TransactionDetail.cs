@@ -14,10 +14,10 @@ namespace LOrd_Card_Shop.Model
     
     public partial class TransactionDetail
     {
+        public int Id { get; set; }
         public int TransactionId { get; set; }
         public Nullable<int> CardId { get; set; }
         public Nullable<int> Quantity { get; set; }
-        public Nullable<decimal> TotalPrice { get; set; }
     
         public virtual Card Card { get; set; }
         public virtual TransactionHeader TransactionHeader { get; set; }

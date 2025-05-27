@@ -14,13 +14,20 @@ namespace LOrd_Card_Shop.Model
     
     public partial class TransactionHeader
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TransactionHeader()
+        {
+            this.TransactionDetails = new HashSet<TransactionDetail>();
+        }
+    
         public int TransactionId { get; set; }
         public Nullable<System.DateTime> TransactionDate { get; set; }
         public Nullable<int> CustomerId { get; set; }
         public string Status { get; set; }
         public Nullable<decimal> TotalPrice { get; set; }
     
-        public virtual TransactionDetail TransactionDetail { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TransactionDetail> TransactionDetails { get; set; }
         public virtual User User { get; set; }
     }
 }

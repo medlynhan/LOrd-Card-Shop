@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Web;
 using System.Web.Util;
 using System.Xml.Linq;
@@ -10,7 +11,7 @@ namespace LOrd_Card_Shop.Repositories
 {
     public class CardRepository
     {
-        Database4Entities1 db = new Database4Entities1 ();
+        Database4Entities3 db = new Database4Entities3 ();
 
         public void insertCard(Card card)
         {
@@ -55,10 +56,24 @@ namespace LOrd_Card_Shop.Repositories
 
         public List<Card> GetCardsByName(string name)
         {
-            var cardList = db.Cards.Where(card => card.CardName.Contains(name)).ToList();
+            var cardList = db.Cards.Where(card => card.CardName.Contains(name) && card.isDeleted == false).ToList();
             return cardList;
         }
 
+
+        public bool isCardDeleted(int  id)
+        {
+            Card card = getCardById(id);
+
+            if (card.isDeleted == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
 
 

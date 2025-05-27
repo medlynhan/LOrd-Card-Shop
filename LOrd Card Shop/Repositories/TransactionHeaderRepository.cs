@@ -8,7 +8,7 @@ namespace LOrd_Card_Shop.Repositories
 {
     public class TransactionHeaderRepository
     {
-        Database4Entities1 db = new Database4Entities1();
+        Database4Entities3 db = new Database4Entities3();
         public List<TransactionHeader> getAllTransactionHeader()
         {
             return db.TransactionHeaders.ToList();
@@ -47,6 +47,16 @@ namespace LOrd_Card_Shop.Repositories
                     join y in db.TransactionHeaders on x.TransactionId equals y.TransactionId
                     where x.TransactionId == transactionID
                     select x).ToList();
+        }
+
+        public void Add(TransactionHeader header)
+        {
+            db.TransactionHeaders.Add(header);
+        }
+
+        public void Save()
+        {
+            db.SaveChanges();
         }
     }
 }

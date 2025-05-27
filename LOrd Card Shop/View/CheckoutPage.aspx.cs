@@ -7,14 +7,14 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using LOrd_Card_Shop.Handler;
 using System.Web.Util;
+using LOrd_Card_Shop.Controller;
 
 namespace LOrd_Card_Shop.View
 {
     public partial class CheckoutPage : System.Web.UI.Page
     {
-        CheckoutHandler handler = new CheckoutHandler();
-        CartHandler cartHandler = new CartHandler();
-      
+        CartController cartController = new CartController();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -29,7 +29,7 @@ namespace LOrd_Card_Shop.View
             dynamic user = Session["user"];
             int userId = Convert.ToInt32(user.UserId);
 
-            var cartData = handler.GetCartItems(userId);
+            var cartData = cartController.GetCartItems(userId);
             GridView1.DataSource = cartData.Items;
             GridView1.DataBind();
             TotalPriceLbl.Text = cartData.TotalPrice.ToString("0.00");
@@ -40,9 +40,10 @@ namespace LOrd_Card_Shop.View
             dynamic user = Session["user"];
             int userId = Convert.ToInt32(user.UserId);
 
+            cartController.Checkout(userId);
 
 
-            cartHandler.clear(userId);
+            cartController.clear(userId);
 
 
         }
