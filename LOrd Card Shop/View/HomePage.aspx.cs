@@ -24,7 +24,7 @@ namespace LOrd_Card_Shop.View
             {
                 string keyword = Request.QueryString["search"];
                 //debugText.Text = "Search Keyword: " + keyword;
-                if(keyword -- null) debugText.Text = "nuuh";
+                //if(keyword -- null) debugText.Text = "nuuh";
 
                 User LoggedUser = Session["user"] as User;
 
@@ -37,17 +37,10 @@ namespace LOrd_Card_Shop.View
                     UsernameLbl.Text = "Guest";
                 }
 
-                refreshGrid(keyword);
-
             }
         }
 
-        private void refreshGrid(string keyword)
-        {
-            List<Card> cards = cardController.GetFilteredCards(keyword);
-            GridView1.DataSource = cards;
-            GridView1.DataBind();
-        }
+
 
     }
 }

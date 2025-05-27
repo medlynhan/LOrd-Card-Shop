@@ -17,11 +17,22 @@ namespace LOrd_Card_Shop.View
 
         protected void refreshData()
         {
-            List<Card> cards = cardController.getAllCards();
-            ManageCardGrid.DataSource = cards;
-            ManageCardGrid.DataBind();
 
-            
+
+            string search = Request.QueryString["search"];
+            if (string.IsNullOrEmpty(search)){
+                List<Card> cards = cardController.getAllCards();
+                ManageCardGrid.DataSource = cards;
+                ManageCardGrid.DataBind();
+            }
+            else
+            {
+                List<Card> cards = cardController.GetCardsByName(search);
+                ManageCardGrid.DataSource = cards;
+                ManageCardGrid.DataBind();
+            }
+
+
         }
 
         protected void Page_Load(object sender, EventArgs e)

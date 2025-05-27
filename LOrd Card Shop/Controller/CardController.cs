@@ -87,9 +87,9 @@ namespace LOrd_Card_Shop.Controller
 
         }
 
-        public List<Card> GetFilteredCards(string keyword)
+        public List<Card> GetCardsByName(string keyword)
         {
-            return handler.GetFilteredCards(keyword);
+            return handler.GetCardsByName(keyword);
         }
 
     }

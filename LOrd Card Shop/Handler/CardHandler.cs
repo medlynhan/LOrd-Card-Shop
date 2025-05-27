@@ -38,14 +38,14 @@ namespace LOrd_Card_Shop.Handler
 
         public void deleteCard(int cardId)
         {
-            Card card = repository.getCardById(cardId);
-            repository.deleteCard(card);
+            
+            repository.deleteCard(cardId);
 
 
         }
 
         // search box
-        public List<Card> GetFilteredCards(string keyword)
+        public List<Card> GetCardsByName(string keyword)
         {
             if (string.IsNullOrWhiteSpace(keyword))
             {
@@ -56,5 +56,8 @@ namespace LOrd_Card_Shop.Handler
                 return repository.GetCardsByName(keyword);
             }
         }
+
+
+
     }
 }

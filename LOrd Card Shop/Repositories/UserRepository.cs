@@ -8,7 +8,7 @@ namespace LOrd_Card_Shop.Repositories
 {
     public class UserRepository
     {
-        Database4Entities db = new Database4Entities();
+        Database4Entities1 db = new Database4Entities1();
         public void insertUser(User user)
         {
             db.Users.Add(user);

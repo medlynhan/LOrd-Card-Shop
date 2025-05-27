@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Util;
+using System.Xml.Linq;
 
 namespace LOrd_Card_Shop.Repositories
 {
     public class CardRepository
     {
-        Database4Entities db = new Database4Entities ();
+        Database4Entities1 db = new Database4Entities1 ();
 
         public void insertCard(Card card)
         {
@@ -20,7 +21,7 @@ namespace LOrd_Card_Shop.Repositories
 
         public List<Card> getAllCards()
         {
-            List<Card> cards = db.Cards.ToList();
+            List<Card> cards = db.Cards.Where(card => card.isDeleted == false ).ToList();
             return cards;
 
         }
@@ -39,9 +40,10 @@ namespace LOrd_Card_Shop.Repositories
 
         }
 
-        public void deleteCard(Card card)
+        public void deleteCard(int cardId)
         {
-            db.Cards.Remove(card);
+            Card card = db.Cards.Find(cardId);
+            card.isDeleted = true;
             db.SaveChanges();
                
         }
@@ -56,6 +58,9 @@ namespace LOrd_Card_Shop.Repositories
             var cardList = db.Cards.Where(card => card.CardName.Contains(name)).ToList();
             return cardList;
         }
+
+
+
 
     }
 }

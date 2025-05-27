@@ -36,19 +36,14 @@
     </style>
 </head>
 <body>
-    <div id="SearchBox">
-        <form action="/view/homepage.aspx" method="get">
-            <input type="text" name="search" placeholder="search cards..." value="<%= HttpUtility.HtmlEncode(Request.QueryString["search"] ?? "") %>" />
-            <input type="submit" value="search" />
-        </form>
-    </div>
+
 
     <form id="form1" runat="server">
         <div>
             <div id="navbar">
 
                 <div id="SearchBox">
-                    <asp:TextBox id="SearchBoxInput" runat="server" placeholder="Search shows..." />
+                    <asp:TextBox ID="SearchBoxInput" runat="server" placeholder="Search shows..." />
                     <asp:Button ID="SearchBtn" runat="server" Text="Search"  OnClick="SearchBtn_Click"/>
                 </div>
 

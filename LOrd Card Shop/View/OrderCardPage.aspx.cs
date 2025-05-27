@@ -1,4 +1,5 @@
-﻿using LOrd_Card_Shop.Factories;
+﻿using LOrd_Card_Shop.Controller;
+using LOrd_Card_Shop.Factories;
 using LOrd_Card_Shop.Handler;
 using LOrd_Card_Shop.Model;
 using LOrd_Card_Shop.Repositories;
@@ -26,8 +27,18 @@ namespace LOrd_Card_Shop.View
 
         void BindCards()
         {
-            GridView1.DataSource = cardHandler.GetAllCards();
-            GridView1.DataBind();
+
+            string search = Request.QueryString["search"];
+            if (string.IsNullOrEmpty(search))
+            {
+                GridView1.DataSource = cardHandler.getAllCards();
+                GridView1.DataBind();
+            }
+            else
+            {
+                GridView1.DataSource = cardHandler.GetCardsByName(search);
+                GridView1.DataBind();
+            }
         }
 
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)

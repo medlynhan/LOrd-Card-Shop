@@ -18,7 +18,6 @@ namespace LOrd_Card_Shop.Master
 
             if (!IsPostBack)
             {
-                string searchTerm = Request.QueryString["search"];
                 if (loggedInUser != null)
                 {
                     if (loggedInUser.UserRole.ToLower() == "customer")
@@ -63,6 +62,19 @@ namespace LOrd_Card_Shop.Master
 
         protected void SearchBtn_Click(object sender, EventArgs e)
         {
+            User loggedInUser = Session["user"] as User;
+            string search = SearchBoxInput.Text;
+
+            if (loggedInUser.UserRole.ToLower() == "customer")
+            {
+                NavCustomer.Visible = true;
+                NavAdmin.Visible = false;
+                Response.Redirect("OrderCardPage.aspx?search="+search);
+            }
+            else if (loggedInUser.UserRole.ToLower() == "admin")
+            {
+                Response.Redirect("ManageCardPage.aspx?search="+search);
+            }
 
         }
 
