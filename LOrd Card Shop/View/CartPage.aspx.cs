@@ -1,4 +1,5 @@
-﻿using LOrd_Card_Shop.Handler;
+﻿using LOrd_Card_Shop.Controller;
+using LOrd_Card_Shop.Handler;
 using LOrd_Card_Shop.Model;
 using System;
 using System.Collections.Generic;
@@ -11,8 +12,8 @@ namespace LOrd_Card_Shop.View
 {
     public partial class CartPage : System.Web.UI.Page
     {
-        
-        CartHandler handler = new CartHandler();
+        CartController cartController = new CartController();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -38,7 +39,7 @@ namespace LOrd_Card_Shop.View
             }
 
             var userId = ((dynamic)Session["user"]).UserId;
-            var cartItems = handler.getCart(userId);
+            var cartItems = cartController.getCart(userId);
             GridView1.DataSource = cartItems;
             GridView1.DataBind();
         }
@@ -58,7 +59,7 @@ namespace LOrd_Card_Shop.View
             }
 
             var userId = ((dynamic)Session["user"]).UserId;
-            handler.clear(userId);
+            cartController.clear(userId);
             Bind();
         }
     }

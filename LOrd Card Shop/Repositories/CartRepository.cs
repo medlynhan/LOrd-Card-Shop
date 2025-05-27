@@ -11,7 +11,7 @@ namespace LOrd_Card_Shop.Repositories
     public class CartRepository
     {
 
-        Database4Entities1 db = new Database4Entities1();
+        Database4Entities3 db = new Database4Entities3();
         public void insertCart(Cart cart)
         {
             db.Carts.Add(cart);
@@ -80,6 +80,7 @@ namespace LOrd_Card_Shop.Repositories
                      where cart.UserId == userId
                      select new
                      {
+                         card.CardId,
                          card.CardName,
                          card.CardPrice,
                          card.CardDesc,

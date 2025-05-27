@@ -97,5 +97,7 @@ namespace LOrd_Card_Shop.Controller
             return handler.getCardById(id);
         }
 
+
+
     }
 }

@@ -15,5 +15,31 @@ namespace LOrd_Card_Shop.Controller
             handler.deleteAllUnavailableCards(cardId);
 
         }
+
+        public void Checkout(int userId)
+        {
+            handler.Checkout(userId);
+        }
+
+        public void AddToCart(int userId, int cardId)
+        {
+            handler.AddToCart(userId, cardId);
+        }
+
+        public List<dynamic> getCart(int userId)
+        {
+            return handler.getCart(userId);
+        }
+
+        public CartData GetCartItems(int userId)
+        {
+            return handler.GetCartItems(userId);
+        }
+
+        public void clear(int userId)
+        {
+            handler.clear(userId);
+        }
+
     }
 }

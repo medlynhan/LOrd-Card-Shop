@@ -14,8 +14,9 @@ namespace LOrd_Card_Shop.View
 {
     public partial class OrderCardPage : System.Web.UI.Page
     {
-        CardHandler cardHandler = new CardHandler();
-        CartHandler cartHandler = new CartHandler();
+        CartController cartController = new CartController();
+        CardController cardController = new CardController();
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -31,24 +32,23 @@ namespace LOrd_Card_Shop.View
             string search = Request.QueryString["search"];
             if (string.IsNullOrEmpty(search))
             {
-                GridView1.DataSource = cardHandler.getAllCards();
-                GridView1.DataBind();
+                OrderCardGrid.DataSource = cardController.getAllCards();
+                OrderCardGrid.DataBind();
             }
             else
             {
-                GridView1.DataSource = cardHandler.GetCardsByName(search);
-                GridView1.DataBind();
+                OrderCardGrid.DataSource = cardController.GetCardsByName(search);
+                OrderCardGrid.DataBind();
             }
         }
 
-        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+
+        protected void OrderCardGrid_RowEditing(object sender, GridViewEditEventArgs e)
         {
-            if (e.CommandName == "AddToCart")
-            {
-                int rowIndex = Convert.ToInt32(e.CommandArgument);
-                int cardId = Convert.ToInt32(GridView1.DataKeys[rowIndex].Value);
-                AddToCart(cardId);
-            }
+            GridViewRow row = OrderCardGrid.Rows[e.NewEditIndex];
+            int cardId = int.Parse(row.Cells[1].Text);
+            AddToCart(cardId);
+            
         }
 
         void AddToCart(int cardId)
@@ -60,7 +60,7 @@ namespace LOrd_Card_Shop.View
             }
 
             dynamic user = Session["user"];
-            cartHandler.AddToCart(user.UserId, cardId);
+            cartController.AddToCart(user.UserId, cardId);
         }
 
         protected void Detail_Click(object sender, EventArgs e)

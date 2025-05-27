@@ -13,10 +13,10 @@ namespace LOrd_Card_Shop.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Database4Entities1 : DbContext
+    public partial class Database4Entities3 : DbContext
     {
-        public Database4Entities1()
-            : base("name=Database4Entities1")
+        public Database4Entities3()
+            : base("name=Database4Entities3")
         {
         }
     

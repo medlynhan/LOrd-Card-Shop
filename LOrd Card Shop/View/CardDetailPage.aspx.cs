@@ -23,8 +23,8 @@ namespace LOrd_Card_Shop.View
 
         private void Bind()
         {
-            GridView1.DataSource = cardController.getAllCards();
-            GridView1.DataBind();
+            OrderCardGrid.DataSource = cardController.getAllCards();
+            OrderCardGrid.DataBind();
         }
 
         protected void BackBtn_Click(object sender, EventArgs e)

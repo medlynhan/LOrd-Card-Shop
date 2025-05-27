@@ -14,7 +14,6 @@ namespace LOrd_Card_Shop.Factories
             transactionDetail.TransactionId = transactionID;
             transactionDetail.CardId = cardID;
             transactionDetail.Quantity = quantity;
-            transactionDetail.TotalPrice = totalPrice;
             return transactionDetail;
         }
     }

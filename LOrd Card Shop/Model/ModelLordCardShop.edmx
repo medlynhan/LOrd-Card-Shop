@@ -34,12 +34,12 @@
         </EntityType>
         <EntityType Name="TransactionDetail">
           <Key>
-            <PropertyRef Name="TransactionId" />
+            <PropertyRef Name="Id" />
           </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TransactionId" Type="int" Nullable="false" />
           <Property Name="CardId" Type="int" />
           <Property Name="Quantity" Type="int" />
-          <Property Name="TotalPrice" Type="decimal" Precision="18" Scale="0" />
         </EntityType>
         <EntityType Name="TransactionHeader">
           <Key>
@@ -89,7 +89,7 @@
         </Association>
         <Association Name="FK_TransactionDetail_TransactionHeader">
           <End Role="TransactionHeader" Type="Self.TransactionHeader" Multiplicity="1" />
-          <End Role="TransactionDetail" Type="Self.TransactionDetail" Multiplicity="0..1" />
+          <End Role="TransactionDetail" Type="Self.TransactionDetail" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TransactionHeader">
               <PropertyRef Name="TransactionId" />
@@ -189,12 +189,12 @@
         </EntityType>
         <EntityType Name="TransactionDetail">
           <Key>
-            <PropertyRef Name="TransactionId" />
+            <PropertyRef Name="Id" />
           </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TransactionId" Type="Int32" Nullable="false" />
           <Property Name="CardId" Type="Int32" />
           <Property Name="Quantity" Type="Int32" />
-          <Property Name="TotalPrice" Type="Decimal" Precision="18" Scale="0" />
           <NavigationProperty Name="Card" Relationship="Self.FK_TransactionDetail_Card" FromRole="TransactionDetail" ToRole="Card" />
           <NavigationProperty Name="TransactionHeader" Relationship="Self.FK_TransactionDetail_TransactionHeader" FromRole="TransactionDetail" ToRole="TransactionHeader" />
         </EntityType>
@@ -207,7 +207,7 @@
           <Property Name="CustomerId" Type="Int32" />
           <Property Name="Status" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="TotalPrice" Type="Decimal" Precision="18" Scale="0" />
-          <NavigationProperty Name="TransactionDetail" Relationship="Self.FK_TransactionDetail_TransactionHeader" FromRole="TransactionHeader" ToRole="TransactionDetail" />
+          <NavigationProperty Name="TransactionDetails" Relationship="Self.FK_TransactionDetail_TransactionHeader" FromRole="TransactionHeader" ToRole="TransactionDetail" />
           <NavigationProperty Name="User" Relationship="Self.FK_TransactionHeader_Users" FromRole="TransactionHeader" ToRole="Users" />
         </EntityType>
         <EntityType Name="User">
@@ -262,7 +262,7 @@
         </Association>
         <Association Name="FK_TransactionDetail_TransactionHeader">
           <End Role="TransactionHeader" Type="Self.TransactionHeader" Multiplicity="1" />
-          <End Role="TransactionDetail" Type="Self.TransactionDetail" Multiplicity="0..1" />
+          <End Role="TransactionDetail" Type="Self.TransactionDetail" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TransactionHeader">
               <PropertyRef Name="TransactionId" />
@@ -284,7 +284,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Database4Entities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Database4Entities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Cards" EntityType="Self.Card" />
           <EntitySet Name="Carts" EntityType="Self.Cart" />
           <EntitySet Name="Tables" EntityType="Self.Table" />
@@ -317,7 +317,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Database4ModelStoreContainer" CdmEntityContainer="Database4Entities1">
+        <EntityContainerMapping StorageEntityContainer="Database4ModelStoreContainer" CdmEntityContainer="Database4Entities3">
           <EntitySetMapping Name="Cards">
             <EntityTypeMapping TypeName="Database4Model.Card">
               <MappingFragment StoreEntitySet="Card">
@@ -351,10 +351,10 @@
           <EntitySetMapping Name="TransactionDetails">
             <EntityTypeMapping TypeName="Database4Model.TransactionDetail">
               <MappingFragment StoreEntitySet="TransactionDetail">
+                <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
                 <ScalarProperty Name="CardId" ColumnName="CardId" />
                 <ScalarProperty Name="Quantity" ColumnName="Quantity" />
-                <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
