@@ -9,7 +9,7 @@ namespace LOrd_Card_Shop.Repositories
 {
     public class CardRepository
     {
-        Database4Entities db = new Database4Entities ();
+        Database4Entities1 db = new Database4Entities1 ();
 
         public void insertCard(Card card)
         {
@@ -20,7 +20,7 @@ namespace LOrd_Card_Shop.Repositories
 
         public List<Card> getAllCards()
         {
-            List<Card> cards = db.Cards.ToList();
+            List<Card> cards = db.Cards.Where(c => c.isDeleted == false).ToList();
             return cards;
 
         }
@@ -39,11 +39,11 @@ namespace LOrd_Card_Shop.Repositories
 
         }
 
-        public void deleteCard(Card card)
-        {
-            db.Cards.Remove(card);
+        public void deleteCard(int cardID)
+        {   
+            Card card = db.Cards.Find(cardID);
+            card.isDeleted = true;
             db.SaveChanges();
-               
         }
 
         public Card getCardById(int id)

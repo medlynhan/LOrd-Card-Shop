@@ -11,7 +11,7 @@ namespace LOrd_Card_Shop.Repositories
     public class CartRepository
     {
 
-        Database4Entities db = new Database4Entities();
+        Database4Entities1 db = new Database4Entities1();
         public void insertCart(Cart cart)
         {
             db.Carts.Add(cart);

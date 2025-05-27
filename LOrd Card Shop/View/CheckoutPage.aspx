@@ -21,7 +21,7 @@
 
             <br />
 
-            <asp:Button ID="CheckoutNowBtn" runat="server" Text="Checkout Now" />
+            <asp:Button ID="CheckoutNowBtn" runat="server" Text="Checkout Now" OnClick="CheckoutNowBtn_Click" />
             
 
 

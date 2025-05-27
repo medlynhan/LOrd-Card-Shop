@@ -8,12 +8,13 @@ namespace LOrd_Card_Shop.Factories
 {
     public class TransactionHeaderFactory
     {
-        public TransactionHeader Create(DateTime transactionDate, int customerID, String status)
+        public TransactionHeader Create(DateTime transactionDate, int customerID, string status, decimal totalPrice)
         {
             TransactionHeader transactionHeader = new TransactionHeader();
             transactionHeader.CustomerId = customerID;
             transactionHeader.TransactionDate = transactionDate;
             transactionHeader.Status = status;
+            transactionHeader.TotalPrice = totalPrice;
             return transactionHeader;
         }
     }

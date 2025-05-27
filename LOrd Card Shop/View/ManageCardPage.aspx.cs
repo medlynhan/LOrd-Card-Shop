@@ -14,11 +14,14 @@ namespace LOrd_Card_Shop.View
     {
         CardController cardController = new CardController();
         CartController cartController = new CartController();
+
         protected void refreshData()
         {
             List<Card> cards = cardController.getAllCards();
             ManageCardGrid.DataSource = cards;
             ManageCardGrid.DataBind();
+
+            
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -34,10 +37,11 @@ namespace LOrd_Card_Shop.View
             GridViewRow row = ManageCardGrid.Rows[e.RowIndex];
             int id = int.Parse(row.Cells[1].Text);
 
-            cartController.deleteAllUnavailableCards(id);
             cardController.deleteCard(id);
 
             refreshData();
+
+
         }
 
         protected void ManageCardGrid_RowEditing(object sender, GridViewEditEventArgs e)

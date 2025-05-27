@@ -18,6 +18,7 @@ namespace LOrd_Card_Shop.Model
         public Nullable<System.DateTime> TransactionDate { get; set; }
         public Nullable<int> CustomerId { get; set; }
         public string Status { get; set; }
+        public Nullable<decimal> TotalPrice { get; set; }
     
         public virtual TransactionDetail TransactionDetail { get; set; }
         public virtual User User { get; set; }

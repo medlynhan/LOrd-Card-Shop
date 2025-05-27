@@ -18,9 +18,9 @@ namespace LOrd_Card_Shop.Handler
             return repository.getTransactionDetailByTransactionID(transactionID);
         }
 
-        public void insertTransactionDetail(int transactionID, int cardID, int quantity)
+        public void insertTransactionDetail(int transactionID, int cardID, int quantity, decimal totalPrice)
         {
-            TransactionDetail transaction = factory.Create(transactionID, cardID, quantity);
+            TransactionDetail transaction = factory.Create(transactionID, cardID, quantity,totalPrice);
             repository.insertTransactionDetail(transaction);
 
 

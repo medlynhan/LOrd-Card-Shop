@@ -16,9 +16,9 @@ namespace LOrd_Card_Shop.Controller
             return handler.getTransactionDetailByTransactionID(transactionID);
         }
 
-        public void insertTransactionDetail(int transactionID, int cardID, int quantity)
+        public void insertTransactionDetail(int transactionID, int cardID, int quantity, decimal totalPrice)
         {
-            handler.insertTransactionDetail(transactionID, cardID, quantity);
+            handler.insertTransactionDetail(transactionID, cardID, quantity, totalPrice);
 
         }
     }

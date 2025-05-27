@@ -8,12 +8,13 @@ namespace LOrd_Card_Shop.Factories
 {
     public class TransactionDetailFactory
     {
-        public TransactionDetail Create(int transactionID, int cardID, int quantity)
+        public TransactionDetail Create(int transactionID, int cardID, int quantity,decimal totalPrice)
         {
             TransactionDetail transactionDetail = new TransactionDetail();
             transactionDetail.TransactionId = transactionID;
             transactionDetail.CardId = cardID;
             transactionDetail.Quantity = quantity;
+            transactionDetail.TotalPrice = totalPrice;
             return transactionDetail;
         }
     }
