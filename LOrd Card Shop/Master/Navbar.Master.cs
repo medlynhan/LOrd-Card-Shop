@@ -37,12 +37,8 @@ namespace LOrd_Card_Shop.Master
                 }
             }
 
-                            <div id="SearchBox">
-                    <input id="SearchBoxInput" type="text" name="search" placeholder="Search shows..."/>
-                    <input type="submit" value="Search" />
-                </div>
 
-            if (.Value() ==)
+           
         }
 
         protected void Logout_Click1(object sender, EventArgs e)
@@ -57,6 +53,11 @@ namespace LOrd_Card_Shop.Master
             Session.Clear();
             Session.Abandon();
             Response.Redirect("RegisterPage.aspx");
+        }
+
+        protected void SearchBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
