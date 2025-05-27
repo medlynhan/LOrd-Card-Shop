@@ -41,7 +41,11 @@ namespace LOrd_Card_Shop.Handler
             
             repository.deleteCard(cardId);
 
+        }
 
+        public Card getCardById(int id)
+        {
+            return repository.getCardById(id);
         }
 
         // search box

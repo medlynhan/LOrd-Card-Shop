@@ -92,5 +92,10 @@ namespace LOrd_Card_Shop.Controller
             return handler.GetCardsByName(keyword);
         }
 
+        public Card getCardById(int id)
+        {
+            return handler.getCardById(id);
+        }
+
     }
 }
