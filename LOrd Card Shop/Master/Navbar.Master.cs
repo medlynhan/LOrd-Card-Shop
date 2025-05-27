@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Xml.Linq;
 using LOrd_Card_Shop.Model;
 
 namespace LOrd_Card_Shop.Master
@@ -35,6 +36,13 @@ namespace LOrd_Card_Shop.Master
                     }
                 }
             }
+
+                            <div id="SearchBox">
+                    <input id="SearchBoxInput" type="text" name="search" placeholder="Search shows..."/>
+                    <input type="submit" value="Search" />
+                </div>
+
+            if (.Value() ==)
         }
 
         protected void Logout_Click1(object sender, EventArgs e)

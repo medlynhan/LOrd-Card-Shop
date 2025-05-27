@@ -40,7 +40,7 @@
         <div>
             <div id="navbar">
                 <div id="SearchBox">
-                    <input type="text" name="search" placeholder="Search shows..." value="<%= Request.QueryString["search"] ?? "" %>" />
+                    <input  id="SearchBoxInput"  type="text" name="search" placeholder="Search shows..."/>
                     <input type="submit" value="Search" />
                 </div>
 
