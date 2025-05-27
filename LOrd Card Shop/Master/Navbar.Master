@@ -40,8 +40,8 @@
         <div>
             <div id="navbar">
                 <div id="SearchBox">
-                    <input  id="SearchBoxInput"  type="text" name="search" placeholder="Search shows..."/>
-                    <input type="submit" value="Search" />
+                    <asp:TextBox id="SearchBoxInput" runat="server" placeholder="Search shows..." />
+                    <asp:Button ID="SearchBtn" runat="server" Text="Search"  OnClick="SearchBtn_Click"/>
                 </div>
 
                 <div>
