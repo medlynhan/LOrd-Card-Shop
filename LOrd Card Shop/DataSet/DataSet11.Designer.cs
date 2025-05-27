@@ -616,6 +616,8 @@ namespace LOrd_Card_Shop.DataSet {
             
             private global::System.Data.DataColumn columnQuantity;
             
+            private global::System.Data.DataColumn columnTotalPrice;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public TransactionDetailDataTable() {
@@ -675,6 +677,14 @@ namespace LOrd_Card_Shop.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn TotalPriceColumn {
+                get {
+                    return this.columnTotalPrice;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -710,12 +720,13 @@ namespace LOrd_Card_Shop.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TransactionDetailRow AddTransactionDetailRow(TransactionHeaderRow parentTransactionHeaderRowByTransactionHeader_TransactionDetail, string CardId, string Quantity) {
+            public TransactionDetailRow AddTransactionDetailRow(TransactionHeaderRow parentTransactionHeaderRowByTransactionHeader_TransactionDetail, string CardId, string Quantity, string TotalPrice) {
                 TransactionDetailRow rowTransactionDetailRow = ((TransactionDetailRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         CardId,
-                        Quantity};
+                        Quantity,
+                        TotalPrice};
                 if ((parentTransactionHeaderRowByTransactionHeader_TransactionDetail != null)) {
                     columnValuesArray[0] = parentTransactionHeaderRowByTransactionHeader_TransactionDetail[0];
                 }
@@ -744,6 +755,7 @@ namespace LOrd_Card_Shop.DataSet {
                 this.columnTransactionId = base.Columns["TransactionId"];
                 this.columnCardId = base.Columns["CardId"];
                 this.columnQuantity = base.Columns["Quantity"];
+                this.columnTotalPrice = base.Columns["TotalPrice"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -755,6 +767,8 @@ namespace LOrd_Card_Shop.DataSet {
                 base.Columns.Add(this.columnCardId);
                 this.columnQuantity = new global::System.Data.DataColumn("Quantity", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnQuantity);
+                this.columnTotalPrice = new global::System.Data.DataColumn("TotalPrice", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotalPrice);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1083,6 +1097,22 @@ namespace LOrd_Card_Shop.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string TotalPrice {
+                get {
+                    try {
+                        return ((string)(this[this.tableTransactionDetail.TotalPriceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalPrice\' in table \'TransactionDetail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransactionDetail.TotalPriceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public TransactionHeaderRow TransactionHeaderRow {
                 get {
                     return ((TransactionHeaderRow)(this.GetParentRow(this.Table.ParentRelations["TransactionHeader_TransactionDetail"])));
@@ -1126,6 +1156,18 @@ namespace LOrd_Card_Shop.DataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetQuantityNull() {
                 this[this.tableTransactionDetail.QuantityColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTotalPriceNull() {
+                return this.IsNull(this.tableTransactionDetail.TotalPriceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTotalPriceNull() {
+                this[this.tableTransactionDetail.TotalPriceColumn] = global::System.Convert.DBNull;
             }
         }
         

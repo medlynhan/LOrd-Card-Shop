@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Util;
+using LOrd_Card_Shop.Controller;
 using LOrd_Card_Shop.DataSet;
 using LOrd_Card_Shop.Handler;
 using LOrd_Card_Shop.Model;
@@ -14,12 +15,14 @@ namespace LOrd_Card_Shop.View
 {
     public partial class TransactionReportPage : System.Web.UI.Page
     {
-        TransactionHeaderHandler handler = new TransactionHeaderHandler();
+        TransactionHeaderController transactionHeaderHandler = new TransactionHeaderController();
+        CardController cardController = new CardController();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             CrystalReport1 report = new CrystalReport1();
             CrystalReportViewer1.ReportSource = report;
-            DataSet1 data = getData(handler.getAllTransactionHeader());
+            DataSet1 data = getData(transactionHeaderHandler.getAllTransactionHeader());
             report.SetDataSource(data);
 
         }
@@ -39,7 +42,7 @@ namespace LOrd_Card_Shop.View
                 hrow["Status"] = t.Status;
 
                 headertable.Rows.Add(hrow);
-                var transactionDetails = handler.getTransactionDetailByTransactionID(t.TransactionId);
+                var transactionDetails = transactionHeaderHandler.getTransactionDetailByTransactionID(t.TransactionId);
 
                 foreach (TransactionDetail d in transactionDetails)
                 {
@@ -47,6 +50,10 @@ namespace LOrd_Card_Shop.View
                     drow["TransactionId"] = d.TransactionId;
                     drow["CardId"] = d.CardId;
                     drow["Quantity"] = d.Quantity;
+
+                    var card = cardController.getCardById(d.CardId.GetValueOrDefault());
+                    var totalPrice = card.CardPrice * d.Quantity;
+                    drow["TotalPrice"] = totalPrice;
                     detailtable.Rows.Add(drow);
                 }
             }
