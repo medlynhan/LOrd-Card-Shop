@@ -50,10 +50,10 @@ namespace LOrd_Card_Shop.Handler
                 detail.Quantity = item.Quantity;
 
                 detailRepo.Add(detail);
-                detailRepo.Save();
+                
             }
 
-           
+            detailRepo.Save();
             repository.clear(userId);
         }
 

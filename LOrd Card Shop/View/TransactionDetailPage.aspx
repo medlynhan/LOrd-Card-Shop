@@ -5,14 +5,16 @@
     <div>
         <h1>Transaction Detail</h1>
 
-        <asp:Label ID="Label1" runat="server" Text="Transaction Id : "></asp:Label>
-        <asp:Label ID="TransactionIdLbl" runat="server" Text=" "></asp:Label><br/>
 
-        <asp:Label ID="Label2" runat="server" Text="Card Id : "></asp:Label>
-        <asp:Label ID="CardIdLbl" runat="server" Text=" "></asp:Label><br/>
+        <asp:GridView ID="TransactionDetailGrid" runat="server" AutoGenerateColumns="False" >   
+            <Columns>
+                <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" />
+                <asp:BoundField DataField="CardId" HeaderText="CardId" SortExpression="CardId" />
+                <asp:BoundField DataField="Quantity" HeaderText="Quantity" SortExpression="Quantity"/>
+            </Columns>
 
-        <asp:Label ID="Label4" runat="server" Text="Quantity Id : "></asp:Label>
-        <asp:Label ID="QuantityLbl" runat="server" Text=" "></asp:Label><br/>
-        <br />
+        </asp:GridView><br/>
+
+        <asp:Button ID="BackBtn" runat="server" Text="Back" OnClick="BackBtn_Click"/>
     </div>
 </asp:Content>

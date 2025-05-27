@@ -11,7 +11,7 @@ namespace LOrd_Card_Shop.Controller
     {
         TransactionDetailHandler handler = new TransactionDetailHandler();
 
-        public TransactionDetail getTransactionDetailByTransactionID(int transactionID)
+        public List<TransactionDetail> getTransactionDetailByTransactionID(int transactionID)
         {
             return handler.getTransactionDetailByTransactionID(transactionID);
         }

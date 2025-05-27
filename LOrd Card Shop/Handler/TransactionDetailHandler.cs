@@ -13,7 +13,7 @@ namespace LOrd_Card_Shop.Handler
         TransactionDetailRepository repository = new TransactionDetailRepository();
         TransactionDetailFactory factory = new TransactionDetailFactory();
 
-        public TransactionDetail getTransactionDetailByTransactionID(int transactionID)
+        public List<TransactionDetail> getTransactionDetailByTransactionID(int transactionID)
         {
             return repository.getTransactionDetailByTransactionID(transactionID);
         }

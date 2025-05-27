@@ -45,6 +45,8 @@ namespace LOrd_Card_Shop.View
 
             cartController.clear(userId);
 
+            Response.Redirect("TransactionHistoryPage.aspx");
+
 
         }
     }

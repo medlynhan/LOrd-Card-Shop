@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Util;
@@ -19,11 +20,10 @@ namespace LOrd_Card_Shop.View
  
             int transactionID = int.Parse(Request.QueryString["id"]);
 
-            TransactionDetail detail = controller.getTransactionDetailByTransactionID(transactionID);
+            List<TransactionDetail> detail = controller.getTransactionDetailByTransactionID(transactionID);
+            TransactionDetailGrid.DataSource = detail;
+            TransactionDetailGrid.DataBind();
 
-            TransactionIdLbl.Text = detail.TransactionId.ToString();
-            CardIdLbl.Text = detail.CardId.ToString();
-            QuantityLbl.Text = detail.Quantity.ToString();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -38,6 +38,9 @@ namespace LOrd_Card_Shop.View
 
         }
 
-
+        protected void BackBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("TransactionHistoryPage.aspx");
+        }
     }
 }

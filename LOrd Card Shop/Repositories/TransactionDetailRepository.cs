@@ -21,12 +21,12 @@ namespace LOrd_Card_Shop.Repositories
 
         }
 
-        public TransactionDetail getTransactionDetailByTransactionID(int transactionID)
+        public List <TransactionDetail> getTransactionDetailByTransactionID(int transactionID)
         {
             return (from x in db.TransactionDetails
                     join y in db.TransactionHeaders on x.TransactionId equals y.TransactionId
                     where x.TransactionId == transactionID
-                    select x).ToList().FirstOrDefault();
+                    select x).ToList();
         }
 
         public void Add(TransactionDetail detail)
