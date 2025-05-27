@@ -59,8 +59,7 @@ namespace LOrd_Card_Shop.Handler
 
         public void deleteCard(int cardId)
         {
-            Card card = repository.getCardById(cardId);
-            repository.deleteCard(card);
+            repository.deleteCard(cardId);
 
 
         }

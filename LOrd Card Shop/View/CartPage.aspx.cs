@@ -11,7 +11,7 @@ namespace LOrd_Card_Shop.View
 {
     public partial class CartPage : System.Web.UI.Page
     {
-        Database4Entities db = new Database4Entities();
+        
         CartHandler handler = new CartHandler();
         protected void Page_Load(object sender, EventArgs e)
         {

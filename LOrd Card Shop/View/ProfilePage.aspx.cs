@@ -11,7 +11,7 @@ namespace LOrd_Card_Shop.View
 {
     public partial class ProfilePageaspx : System.Web.UI.Page
     {
-        Database4Entities db = new Database4Entities();
+        Database4Entities1 db = new Database4Entities1();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)

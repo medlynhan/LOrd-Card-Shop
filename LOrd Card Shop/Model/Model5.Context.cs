@@ -13,10 +13,10 @@ namespace LOrd_Card_Shop.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Database4Entities : DbContext
+    public partial class Database4Entities1 : DbContext
     {
-        public Database4Entities()
-            : base("name=Database4Entities")
+        public Database4Entities1()
+            : base("name=Database4Entities1")
         {
         }
     
@@ -27,6 +27,7 @@ namespace LOrd_Card_Shop.Model
     
         public virtual DbSet<Card> Cards { get; set; }
         public virtual DbSet<Cart> Carts { get; set; }
+        public virtual DbSet<Table> Tables { get; set; }
         public virtual DbSet<TransactionDetail> TransactionDetails { get; set; }
         public virtual DbSet<TransactionHeader> TransactionHeaders { get; set; }
         public virtual DbSet<User> Users { get; set; }

@@ -12,14 +12,8 @@ namespace LOrd_Card_Shop.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class TransactionDetail
+    public partial class Table
     {
-        public int TransactionId { get; set; }
-        public Nullable<int> CardId { get; set; }
-        public Nullable<int> Quantity { get; set; }
-        public Nullable<decimal> TotalPrice { get; set; }
-    
-        public virtual Card Card { get; set; }
-        public virtual TransactionHeader TransactionHeader { get; set; }
+        public int Id { get; set; }
     }
 }

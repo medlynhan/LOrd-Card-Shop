@@ -8,7 +8,7 @@ namespace LOrd_Card_Shop.Repositories
 {
     public class TransactionHeaderRepository
     {
-        Database4Entities db = new Database4Entities();
+        Database4Entities1 db = new Database4Entities1();
         public List<TransactionHeader> getAllTransactionHeader()
         {
             return db.TransactionHeaders.ToList();

@@ -17,9 +17,9 @@ namespace LOrd_Card_Shop.Controller
             return handler.getAllTransactionHeader();
         }
 
-        public void insertTransactionHeader(DateTime transactionDate, int customerID, String status)
+        public void insertTransactionHeader(DateTime transactionDate, int customerID, string status, decimal totalPrice)
         {
-            handler.insertTransactionHeader(transactionDate, customerID, status);
+            handler.insertTransactionHeader(transactionDate, customerID, status, totalPrice);
 
         }
 

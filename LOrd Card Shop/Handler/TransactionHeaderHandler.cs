@@ -19,9 +19,9 @@ namespace LOrd_Card_Shop.Handler
             return transaction;
         }
 
-        public void insertTransactionHeader(DateTime transactionDate, int customerID, String status)
+        public void insertTransactionHeader(DateTime transactionDate, int customerID, string status, decimal totalPrice)
         {
-            TransactionHeader transaction = factory.Create(transactionDate, customerID, status);
+            TransactionHeader transaction = factory.Create(transactionDate, customerID, status, totalPrice);
             repository.insertTransactionHeader(transaction);
 
         }

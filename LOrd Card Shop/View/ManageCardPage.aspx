@@ -28,7 +28,6 @@
     </asp:GridView><br/>
 
     <asp:Button ID="InsertBtn" runat="server" Text="Insert Data"  OnClick="InsertBtn_Click"/><br/>
-
-    
+        <asp:Label ID="ErrorMsg" runat="server" Text=" "></asp:Label>
 </div>
 </asp:Content>

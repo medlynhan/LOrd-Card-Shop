@@ -15,6 +15,7 @@
           <Property Name="CardDesc" Type="varchar" MaxLength="100" />
           <Property Name="CardType" Type="varchar" MaxLength="100" />
           <Property Name="isFoil" Type="varchar" MaxLength="5" />
+          <Property Name="isDeleted" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="Carts">
           <Key>
@@ -25,6 +26,12 @@
           <Property Name="UserId" Type="int" />
           <Property Name="Quantity" Type="int" />
         </EntityType>
+        <EntityType Name="Table">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="TransactionDetail">
           <Key>
             <PropertyRef Name="TransactionId" />
@@ -32,6 +39,7 @@
           <Property Name="TransactionId" Type="int" Nullable="false" />
           <Property Name="CardId" Type="int" />
           <Property Name="Quantity" Type="int" />
+          <Property Name="TotalPrice" Type="decimal" Precision="18" Scale="0" />
         </EntityType>
         <EntityType Name="TransactionHeader">
           <Key>
@@ -41,6 +49,7 @@
           <Property Name="TransactionDate" Type="date" />
           <Property Name="CustomerId" Type="int" />
           <Property Name="Status" Type="varchar" MaxLength="100" />
+          <Property Name="TotalPrice" Type="decimal" Precision="18" Scale="0" />
         </EntityType>
         <EntityType Name="Users">
           <Key>
@@ -117,6 +126,7 @@
         <EntityContainer Name="Database4ModelStoreContainer">
           <EntitySet Name="Card" EntityType="Self.Card" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Carts" EntityType="Self.Carts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TransactionDetail" EntityType="Self.TransactionDetail" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TransactionHeader" EntityType="Self.TransactionHeader" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
@@ -156,6 +166,7 @@
           <Property Name="CardDesc" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="CardType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="isFoil" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="isDeleted" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Carts" Relationship="Self.FK_Card" FromRole="Card" ToRole="Carts" />
           <NavigationProperty Name="TransactionDetails" Relationship="Self.FK_TransactionDetail_Card" FromRole="Card" ToRole="TransactionDetail" />
         </EntityType>
@@ -170,6 +181,12 @@
           <NavigationProperty Name="Card" Relationship="Self.FK_Card" FromRole="Carts" ToRole="Card" />
           <NavigationProperty Name="User" Relationship="Self.FK_Users" FromRole="Carts" ToRole="Users" />
         </EntityType>
+        <EntityType Name="Table">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+        </EntityType>
         <EntityType Name="TransactionDetail">
           <Key>
             <PropertyRef Name="TransactionId" />
@@ -177,6 +194,7 @@
           <Property Name="TransactionId" Type="Int32" Nullable="false" />
           <Property Name="CardId" Type="Int32" />
           <Property Name="Quantity" Type="Int32" />
+          <Property Name="TotalPrice" Type="Decimal" Precision="18" Scale="0" />
           <NavigationProperty Name="Card" Relationship="Self.FK_TransactionDetail_Card" FromRole="TransactionDetail" ToRole="Card" />
           <NavigationProperty Name="TransactionHeader" Relationship="Self.FK_TransactionDetail_TransactionHeader" FromRole="TransactionDetail" ToRole="TransactionHeader" />
         </EntityType>
@@ -188,6 +206,7 @@
           <Property Name="TransactionDate" Type="DateTime" Precision="0" />
           <Property Name="CustomerId" Type="Int32" />
           <Property Name="Status" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TotalPrice" Type="Decimal" Precision="18" Scale="0" />
           <NavigationProperty Name="TransactionDetail" Relationship="Self.FK_TransactionDetail_TransactionHeader" FromRole="TransactionHeader" ToRole="TransactionDetail" />
           <NavigationProperty Name="User" Relationship="Self.FK_TransactionHeader_Users" FromRole="TransactionHeader" ToRole="Users" />
         </EntityType>
@@ -265,9 +284,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Database4Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Database4Entities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Cards" EntityType="Self.Card" />
           <EntitySet Name="Carts" EntityType="Self.Cart" />
+          <EntitySet Name="Tables" EntityType="Self.Table" />
           <EntitySet Name="TransactionDetails" EntityType="Self.TransactionDetail" />
           <EntitySet Name="TransactionHeaders" EntityType="Self.TransactionHeader" />
           <EntitySet Name="Users" EntityType="Self.User" />
@@ -297,7 +317,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Database4ModelStoreContainer" CdmEntityContainer="Database4Entities">
+        <EntityContainerMapping StorageEntityContainer="Database4ModelStoreContainer" CdmEntityContainer="Database4Entities1">
           <EntitySetMapping Name="Cards">
             <EntityTypeMapping TypeName="Database4Model.Card">
               <MappingFragment StoreEntitySet="Card">
@@ -307,6 +327,7 @@
                 <ScalarProperty Name="CardDesc" ColumnName="CardDesc" />
                 <ScalarProperty Name="CardType" ColumnName="CardType" />
                 <ScalarProperty Name="isFoil" ColumnName="isFoil" />
+                <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -320,12 +341,20 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Tables">
+            <EntityTypeMapping TypeName="Database4Model.Table">
+              <MappingFragment StoreEntitySet="Table">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="TransactionDetails">
             <EntityTypeMapping TypeName="Database4Model.TransactionDetail">
               <MappingFragment StoreEntitySet="TransactionDetail">
                 <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
                 <ScalarProperty Name="CardId" ColumnName="CardId" />
                 <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -336,6 +365,7 @@
                 <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
                 <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
