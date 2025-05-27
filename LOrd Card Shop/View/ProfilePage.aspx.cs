@@ -1,4 +1,6 @@
-﻿using LOrd_Card_Shop.Model;
+﻿using LOrd_Card_Shop.Controller;
+using LOrd_Card_Shop.Model;
+using LOrd_Card_Shop.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,12 +13,18 @@ namespace LOrd_Card_Shop.View
 {
     public partial class ProfilePageaspx : System.Web.UI.Page
     {
-        Database4Entities1 db = new Database4Entities1();
+        UserController userController = new UserController();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 var loggedInUser = Session["user"] as User;
+
+                if (loggedInUser == null)
+                {
+                    Response.Redirect("LoginPage.aspx");
+                    return;
+                }
 
                 UsernameTb.Text = loggedInUser.UserName;
                 EmailTb.Text = loggedInUser.UserEmail;
@@ -27,7 +35,12 @@ namespace LOrd_Card_Shop.View
 
         protected void UpdateBtn_Click(object sender, EventArgs e)
         {
-            var user = Session["user"] as User;
+            var sessionUser = Session["user"] as User;
+            if (sessionUser == null)
+            {
+                Response.Redirect("LoginPage.aspx");
+                return;
+            }
 
             string username = UsernameTb.Text;
             string email = EmailTb.Text;
@@ -36,60 +49,7 @@ namespace LOrd_Card_Shop.View
             string newPass = NewPasswordTb.Text;
             string confirmPass = ConfirmPasswordTb.Text;
 
-            if (!Regex.IsMatch(username, @"^[A-Za-z ]{5,30}$"))
-            {
-                ErrorLbl.Text = "Username must be 5–30 characters and letters only.";
-                return;
-            }
-
-            if (!email.Contains("@"))
-            {
-                ErrorLbl.Text = "Email must contain '@'.";
-                return;
-            }
-
-            if (string.IsNullOrEmpty(gender))
-            {
-                ErrorLbl.Text = "Gender must be selected.";
-                return;
-            }
-
-            if (!string.IsNullOrEmpty(newPass))
-            {
-                if (oldPass != user.UserPassword)
-                {
-                    ErrorLbl.Text = "Old password is incorrect.";
-                    return;
-                }
-
-                if (!Regex.IsMatch(newPass, @"^(?=.*[A-Za-z])(?=.*\d).{8,}$"))
-                {
-                    ErrorLbl.Text = "New password must be at least 8 characters and alphanumeric.";
-                    return;
-                }
-
-                if (newPass != confirmPass)
-                {
-                    ErrorLbl.Text = "Confirmation password does not match new password.";
-                    return;
-                }
-
-                user.UserPassword = newPass;
-            }
-
-            user.UserName = username;
-            user.UserEmail = email;
-            user.UserGender = gender;
-
-            // save to database
-            var userToUpdate = db.Users.Find(user.UserId);
-            userToUpdate.UserName = user.UserName;
-            userToUpdate.UserEmail = user.UserEmail;
-            userToUpdate.UserGender = user.UserGender;
-            userToUpdate.UserPassword = user.UserPassword;
-            db.SaveChanges();
-
-            Session["user"] = userToUpdate;
+            userController.updateValidation(sessionUser, username, email, gender, oldPass, newPass, confirmPass);
 
             Response.Redirect("HomePage.aspx");
         }

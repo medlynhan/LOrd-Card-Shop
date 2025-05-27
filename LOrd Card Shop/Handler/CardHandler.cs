@@ -23,27 +23,6 @@ namespace LOrd_Card_Shop.Handler
 
         }
 
-        public List<object> GetAllCards()
-        {
-            return repository.getAllCards()
-                .Select(card => new {
-                    Id = card.CardId,
-                    Name = card.CardName,
-                    Price = card.CardPrice
-                }).ToList<object>();
-        }
-
-        public List<object> getCardDetails()
-        {
-            return repository.getAllCards()
-                .Select(card => new {
-                    Name = card.CardName,
-                    Price = card.CardPrice,
-                    CardType = card.CardType,
-                    CardDesc = card.CardDesc
-                }).ToList<object>();
-        }
-
         public List<Card> getAllCards()
         {
             List<Card> card = repository.getAllCards();
@@ -59,10 +38,23 @@ namespace LOrd_Card_Shop.Handler
 
         public void deleteCard(int cardId)
         {
-            repository.deleteCard(cardId);
+            Card card = repository.getCardById(cardId);
+            repository.deleteCard(card);
 
 
         }
 
+        // search box
+        public List<Card> GetFilteredCards(string keyword)
+        {
+            if (string.IsNullOrWhiteSpace(keyword))
+            {
+                return repository.getAllCards();
+            }
+            else
+            {
+                return repository.GetCardsByName(keyword);
+            }
+        }
     }
 }

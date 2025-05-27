@@ -8,7 +8,7 @@ namespace LOrd_Card_Shop.Repositories
 {
     public class UserRepository
     {
-        Database4Entities1 db = new Database4Entities1();
+        Database4Entities db = new Database4Entities();
         public void insertUser(User user)
         {
             db.Users.Add(user);
@@ -26,9 +26,22 @@ namespace LOrd_Card_Shop.Repositories
         public User getUserByUsernameAndPassword(string username, string password)
         {
             return (from usr in db.Users
-                         where usr.UserName == username
-                         && usr.UserPassword == password
-                         select usr).FirstOrDefault();
+                    where usr.UserName == username
+                    && usr.UserPassword == password
+                    select usr).FirstOrDefault();
+        }
+
+        public void updateUser(User user)
+        {
+            var existingUser = db.Users.Find(user.UserId);
+            if (existingUser == null) return;
+
+            existingUser.UserName = user.UserName;
+            existingUser.UserEmail = user.UserEmail;
+            existingUser.UserGender = user.UserGender;
+            existingUser.UserPassword = user.UserPassword;
+
+            db.SaveChanges();
         }
     }
 }

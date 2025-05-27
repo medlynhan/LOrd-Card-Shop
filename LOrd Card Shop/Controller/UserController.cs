@@ -1,5 +1,6 @@
 ﻿using LOrd_Card_Shop.Handler;
 using LOrd_Card_Shop.Model;
+using LOrd_Card_Shop.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace LOrd_Card_Shop.Controller
 {
     public class UserController
     {
-
+        UserRepository repository = new UserRepository();
         UserHandler handler = new UserHandler();
 
         public string registerValidation(string username, string email, string password, string confirmPassword, string gender, string date, string role)
@@ -66,6 +67,40 @@ namespace LOrd_Card_Shop.Controller
             }   
                
     
+        }
+
+        public string updateValidation(User user, string username, string email, string gender, string oldPassword, string newPassword, string confirmPassword)
+        {
+            if (!Regex.IsMatch(username, @"^[A-Za-z ]{5,30}$"))
+                return "Username must be 5–30 characters and letters only.";
+
+            if (!email.Contains("@"))
+                return "Email must contain '@'.";
+
+            if (string.IsNullOrEmpty(gender))
+                return "Gender must be selected.";
+
+            if (!string.IsNullOrEmpty(newPassword))
+            {
+                if (oldPassword != user.UserPassword)
+                    return "Old password is incorrect.";
+
+                if (!Regex.IsMatch(newPassword, @"^(?=.*[A-Za-z])(?=.*\d).{8,}$"))
+                    return "New password must be at least 8 characters and alphanumeric.";
+
+                if (newPassword != confirmPassword)
+                    return "Confirmation password does not match new password.";
+
+                user.UserPassword = newPassword;
+            }
+
+            user.UserName = username;
+            user.UserEmail = email;
+            user.UserGender = gender;
+
+            repository.updateUser(user);
+
+            return null;
         }
 
         public User getUserByUsernameAndPassword(string username, string password)

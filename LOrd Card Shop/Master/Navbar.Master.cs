@@ -4,7 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Xml.Linq;
+using LOrd_Card_Shop.Controller;
+using LOrd_Card_Shop.Handler;
 using LOrd_Card_Shop.Model;
 
 namespace LOrd_Card_Shop.Master
@@ -17,6 +18,7 @@ namespace LOrd_Card_Shop.Master
 
             if (!IsPostBack)
             {
+                string searchTerm = Request.QueryString["search"];
                 if (loggedInUser != null)
                 {
                     if (loggedInUser.UserRole.ToLower() == "customer")
@@ -35,10 +37,12 @@ namespace LOrd_Card_Shop.Master
                         NavAdmin.Visible = false;
                     }
                 }
+                
             }
 
 
            
+
         }
 
         protected void Logout_Click1(object sender, EventArgs e)
@@ -59,5 +63,6 @@ namespace LOrd_Card_Shop.Master
         {
 
         }
+
     }
 }
